@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">   <!-- favicon icon for browser tab -->
+  <title>Product Manager</title>
+  <link rel="stylesheet" href="css/style.css" />  <!-- link to CSS stylesheet -->
+</head>
+<body>
+    <div class="container">  <!-- main container -->
+      <h1>Product Manager</h1>
+
+      <!-- product form section -->
+      <div class="form-section">
+        <h2>Add Product</h2>
+
+        <div class="form-card">
+          <form id="product-form">
+            <input type="hidden" id="product-id" />  <!-- hidden field for product ID -->
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="text" id="description" placeholder="Description" required />
+            <input type="number" id="price" placeholder="Price" required min="0" step="0.01" />  <!-- price can't be negative, two decimal places -->
+            <label><input type="checkbox" id="available" /> Product is available</label>
+            <button type="submit" class="primary-btn">Save Product</button>  <!-- Submit button -->
+          </form>
+        </div>
+      </div>
+      
+      <h2>Product List</h2>
+
+      <!-- filter dropdown -->
+      <div class="filter-container">
+        <label for="availability-filter">Filter:</label>
+        <select id="availability-filter">  <!-- dropdown to filter product list -->
+          <option value="all">All</option>   <!-- show all products -->
+          <option value="available">Available</option> <!-- show only available products -->
+          <option value="unavailable">Unavailable</option> <!-- show only unavailable products -->
+        </select>
+      </div>
+
+    
+      <!-- product list display -->
+      <div id="product-list"></div>
+    </div>
+  
+    <!-- link to javascript file -->
+    <script type="module" src="js/app.js"></script>
+  </body>
+  
+</html>
