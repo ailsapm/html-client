@@ -1,5 +1,5 @@
 //url for rails api, made it a const so i only had to change one url when I deploy
-const apiUrl = 'http://localhost:3000/products'; // temporary, must remember to change when deployed
+const apiUrl = 'http://18.201.136.216:3000/products'; // originally http://localhost:3000/products but I changed it when deployed
 //when dom has fully loaded ...
 document.addEventListener('DOMContentLoaded', () => {
   loadProducts();  //load products first
